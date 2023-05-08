@@ -14,7 +14,7 @@ function addP(){
     container.innerHTML += p;
 }
 
-var button = document.getElementById("AddP").addEventListener("click", addP);
+document.getElementById("AddP").addEventListener("click", addP);
 
 /*
 This is one way to do it
