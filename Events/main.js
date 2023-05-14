@@ -56,4 +56,20 @@ function scrollSquare(event){
     square.style.left = square.offsetLeft + event.deltaY + 'px';
 }
 
+function redTaggle(){
+    let element = document.getElementById("lightning");
+    if (element.classList.contains("red")){
+        element.classList.remove("red");
+    } else {
+        element.classList.add("red")
+    }
+}
+
+function redEvery2s(){
+    redTaggle();
+    setTimeout(redEvery2s, 100);
+}
+
+redEvery2s();
+
 document.getElementById("scrollContainer").addEventListener("wheel", scrollSquare);
