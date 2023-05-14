@@ -1,3 +1,5 @@
+// Showing-hiding a paragraph
+// ==========================
 function showParagraph(){
     //document.getElementById("p2Hide").classList.remove("hidden");
     var p2h = document.getElementById("p2Hide");
@@ -8,6 +10,8 @@ function showParagraph(){
     }
 }
 
+// Adding a new paragraph
+// ======================
 function addP(){
     let container = document.getElementById("pContainer");
     let p="<p>This paragraph has been added on click</p>";
@@ -16,6 +20,8 @@ function addP(){
 
 document.getElementById("AddP").addEventListener("click", addP);
 
+// Changing the font color based on hover event
+// ============================================
 /*
 This is one way to do it
 
@@ -50,12 +56,17 @@ for (let div of enterLeave){
     div.addEventListener("mouseleave", mouseLeave);
 }
 
+// Square moving effect
+// ====================
 function scrollSquare(event){
     //console.log(event)
     let square = document.getElementById("squareToMove");
     square.style.left = square.offsetLeft + event.deltaY + 'px';
 }
+document.getElementById("scrollContainer").addEventListener("wheel", scrollSquare);
 
+// Delay function
+// ==============
 function redTaggle(){
     let element = document.getElementById("lightning");
     if (element.classList.contains("red")){
@@ -72,4 +83,3 @@ function redEvery2s(){
 
 redEvery2s();
 
-document.getElementById("scrollContainer").addEventListener("wheel", scrollSquare);
